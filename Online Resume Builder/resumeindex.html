@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- linking css file -->
+    <link rel="stylesheet" href="resumestyle.css" />
+</head>
+<body>
+    <div class="container" id="cv-form">
+        <div class="color">
+            <h1 class="text-center pt-4" style="color: rgb(255, 255, 255);">Online Resume Builder</h1>
+            <p class="text-center pb-2">By Sivaranjani C K</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 p-3">
+                <h3>Personal Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="nameField">Name</label>
+                    <input type="text" id="nameField" placeholder="Enter Your Name" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Phone Number</label>
+                    <input type="text" id="contactField" placeholder="Enter Your Phone Number" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Address</label>
+                    <textarea type="text" id="addressField" placeholder="Enter Your Address" class="form-control" rows="5"></textarea>
+                </div>
+
+                <p class="text-secondary my-3">Important Links</p>
+
+                <div class="form-group mt-2">
+                    <label for="mailidField">Email Id</label>
+                    <input type="text" id="mailidField" placeholder="Enter Your Email Address" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkedinField">LinkedIn</label>
+                    <input type="text" id="linkedinField" placeholder="Enter Your Profile link" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="githubField">Github</label>
+                    <input type="text" id="githubField" placeholder="Enter Your Github Account link" class="form-control">
+                </div>
+
+            </div>
+            <div class="col-md-6 p-3">
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-2">
+                    <label>Objective</label>
+                    <textarea type="text" placeholder="Enter Your Objective" class="form-control" rows="2" id="objectiveField"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="sk">
+                    <label>Skills</label>
+                    <textarea type="text" placeholder="Enter Your Skills" class="form-control skField" rows="2"></textarea>
+
+                <div class="container text-center mt-2" id="skAddButton">
+                    <button onclick="addNewSkill()" class="btn btn-primary btn-sm">Add</button>
+                    <button onclick="removeSkill(this)" class="btn btn-danger btn-sm">Remove</button>
+                </div>
+                </div>
+
+                <div class="form-group mt-2" id="pr">
+                    <label>Projects</label>
+                    <textarea type="text" placeholder="Enter Your Project" class="form-control pField" rows="2"></textarea>
+
+                <div class="container text-center mt-2" id="pAddButton">
+                    <button onclick="addNewProject()" class="btn btn-primary btn-sm">Add</button>
+                    <button onclick="removeProject(this)" class="btn btn-danger btn-sm">Remove</button>
+                </div>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label>Work Experience</label>
+                    <textarea type="text" placeholder="Enter Your Experience" class="form-control weField" rows="2"></textarea>
+
+                <div class="container text-center mt-2" id="weAddButton">
+                    <button onclick="addNewWorkExperience()" class="btn btn-primary btn-sm">Add</button>
+                    <button onclick="removeWorkExperience(this)" class="btn btn-danger btn-sm">Remove</button>
+                </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label>Academic Qualification</label>
+                    <textarea type="text" placeholder="Enter Your Academic Details" class="form-control aqField" rows="2"></textarea>
+
+                <div class="container text-center mt-2" id="aqAddButton">
+                    <button onclick="addNewAcademic()" class="btn btn-primary btn-sm">Add</button>
+                    <button onclick="removeAcademic(this)" class="btn btn-danger btn-sm">Remove</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3 text-center">
+            <input type="radio" id="template1" name="template" value="cv-template1" class="my-5 ms-5" checked>
+            <label for="template1">Template 1</label>
+    
+            <input type="radio" id="template2" name="template" value="cv-template2" class="my-5 ms-5">
+            <label for="template2">Template 2</label>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateResume()" class="btn btn-primary btn-md">Generate Resume</button>
+        </div>
+
+    </div>
+
+    <!-- resume template1 -->
+
+    <div class="container" id="cv-template1">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background1">
+                <img src="c3f2c592f9-removebg-preview.png" alt="" class="img-fluid myimg">
+
+                <div class="container">
+                    <p id="nameT">Sivaranjani C K</p>
+                    <p id="contactT">+91 1234567890</p>
+                    <p id="addressT">48/1, Rajaji Road, Ram nagar, Chennai-11. </p>
+
+                    <hr>
+
+                    <p><a id="mailT" href="hariranjani774@gmail.com">hariranjani774@gmail.com</a></p>
+                    <p><a id="linkedT" href="https://www.linkedin.com/in/sivaranjani-ck-02144b223">https://www.linkedin.com/in/sivaranjani-ck-02144b223</a></p>
+                    <p><a id="gitT" href="https://github.com/Cksivaranjani">https://github.com/Cksivaranjani</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-8 py-5">
+                <h1 id="nameT1" class="text-center" style="font-weight: 980;">Sivaranjani C K</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas accusantium repellendus asperiores numquam quibusdam placeat voluptas, animi distinctio dolorem deserunt alias quisquam itaque officiis commodi, aspernatur cumque nemo maxime sint.</p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="skillT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                    
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                    
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="ProjectT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="weT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="aqT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printResume()" class="btn background1" style="font-weight: 900;">Print</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- resume template2 -->
+
+    <div class="container" id="cv-template2">
+        <div class="row">
+            <div class="col-md-8 py-5">
+                <h1 id="nameT1" class="text-center" style="font-weight: 980;">Sivaranjani C K</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background2">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas accusantium repellendus asperiores numquam quibusdam placeat voluptas, animi distinctio dolorem deserunt alias quisquam itaque officiis commodi, aspernatur cumque nemo maxime sint.</p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background2">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="skillT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                    
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                    
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background2">
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="ProjectT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background2">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="weT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background2">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="aqT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, atque?</li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center py-5 background2">
+                <img src="c3f2c592f9-removebg-preview.png" alt="" class="img-fluid myimg">
+
+                <div class="container">
+                    <p id="nameT">Sivaranjani C K</p>
+                    <p id="contactT">+91 1234567890</p>
+                    <p id="addressT">48/1, Rajaji Road, Ram nagar, Chennai-11. </p>
+
+                    <hr>
+
+                    <p><a id="mailT" href="hariranjani774@gmail.com">hariranjani774@gmail.com</a></p>
+                    <p><a id="linkedT" href="https://www.linkedin.com/in/sivaranjani-ck-02144b223">https://www.linkedin.com/in/sivaranjani-ck-02144b223</a></p>
+                    <p><a id="gitT" href="https://github.com/Cksivaranjani">https://github.com/Cksivaranjani</a></p>
+                </div>
+            </div>
+
+            <div class="container mt-3 text-center">
+                <button onclick="printResume()" class="btn background2" style="font-weight: 900;">Print</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- linking js -->
+    <script src="resumescript.js"></script>
+
+</body>
+
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
